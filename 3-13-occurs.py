@@ -1,17 +1,21 @@
-arr = [15, 38, 7, 23, 14]
-
-
+# Function to check if a number is present in an array
 def occurs(number, array):
+    # Return True if the number is found in the array, otherwise False
     return number in array
 
+# Main program
+if __name__ == "__main__":
+    # Define the array to check
+    array = [15, 38, 7, 23, 14]
 
-def main():
-    number = int(input("Number: "))
+    # Prompt the user to enter a number
+    number = int(input("Enter a number: "))
 
-    print("Array:", ' '.join(map(str, arr)))
-    result = "appears" if occurs(number, arr) else "does not appear"
-    print(f"Result: number {number} {result} in the array")
+    # Display the array
+    print("Array:", " ".join(map(str, array)))
 
-
-if __name__ == '__main__':
-    main()
+    # Check if the number is in the array and display the result
+    if occurs(number, array):
+        print(f"Result: number {number} appears in the array")
+    else:
+        print(f"Result: number {number} does not appear in the array")
