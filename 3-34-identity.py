@@ -1,25 +1,22 @@
-n_sizes = [3, 5, 8]
-
-
+# Function to create an identity matrix of size n
 def identity_matrix(n):
-    matrix = [[0 for _ in range(n)] for _ in range(n)]
+    # Create an n x n matrix where the diagonal elements are 1, and others are 0
+    return [[1 if i == j else 0 for j in range(n)] for i in range(n)]
 
-    for i in range(n):
-        matrix[i][i] = 1
-    return matrix
-
-
+# Function to print a 2D array in rows and columns
 def print_matrix(matrix):
     for row in matrix:
-        print(' '.join([str(i) for i in row]))
+        print(" ".join(map(str, row)))
 
+# Create and print identity matrices of size 3, 5, and 8
+print("Identity matrix of size 3:")
+matrix_3 = identity_matrix(3)
+print_matrix(matrix_3)
 
-def main():
-    for n in n_sizes:
-        matrix = identity_matrix(n)
-        print_matrix(matrix)
-        print()
+print("\nIdentity matrix of size 5:")
+matrix_5 = identity_matrix(5)
+print_matrix(matrix_5)
 
-
-if __name__ == '__main__':
-    main()
+print("\nIdentity matrix of size 8:")
+matrix_8 = identity_matrix(8)
+print_matrix(matrix_8)
