@@ -1,11 +1,13 @@
-def main():
-    original_tuple = (10, 20, 30, 40, 50)
+# Program to print a tuple in reverse order
 
-    print(f"Tuple: {','.join(map(str, original_tuple))}")
+# Define the tuple
+tuple_data = (10, 20, 30, 40, 50)
 
-    reversed_tuple = original_tuple[::-1]
-    print(f"Reverse order: {','.join(map(str, reversed_tuple))}")
+# Print the original tuple
+print("Tuple:", ",".join(map(str, tuple_data)))
 
+# Reverse the tuple
+reversed_tuple = tuple_data[::-1]
 
-if __name__ == '__main__':
-    main()
+# Print the reversed tuple
+print("Reverse order:", ",".join(map(str, reversed_tuple)))
