@@ -1,11 +1,12 @@
-arr = [15, 8, 31, 47, 2, 19]
+# Given array of natural numbers
+array = [15, 8, 31, 47, 2, 19]
 
-print("existed array:", ' '.join([str(item) for item in arr]))
+# Print the original array
+print("Existed array:", end=" ")
+for num in array:
+    print(num, end=" ")
 
-reversed_arr = []
-for i in range(len(arr) - 1, -1, -1):
-    reversed_arr.append(arr[i])
 
-# there is an alternative, neat way to do that
-# reversed_arr = arr[::-1]
-print("reverse array:", ' '.join([str(item) for item in arr]))
+print("\nReverse array:", end=" ")
+for i in range(len(array) - 1, -1, -1):
+    print(array[i], end=" ")
