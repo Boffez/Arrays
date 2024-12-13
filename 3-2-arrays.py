@@ -1,5 +1,6 @@
 import random
 
+# Creating the arrays
 arr1 = [3, 7, 1, 0, 4]
 arr2 = [[2, 3], [7, 1], [0, 4]]
 arr3 = [7 for i in range(5)]
@@ -10,13 +11,14 @@ arr7 = [[] for i in range(5)]
 arr8 = [[1 for i in range(2)] for j in range(4)]
 arr9 = [[random.randint(1, 20) for i in range(3)] for j in range(5)]
 
-arr10 = [4, 0, 3]  # an array with values: 4,0,3
-arr11 = [0 for i in range(15)]  # 15-element array filled with zeros
-arr12 = list(range(1, 31))  # an array with integer values in the range of <1,30>
-arr13 = [random.randint(0, 1) for i in range(20)]  # 20-element array filled with 0 or 1 randomly
-arr14 = [[False for i in range(2)] for j in
-         range(5)]  # two-dimensional array with five rows and two columns filled with False
+# Additional arrays
+arr10 = [4, 0, 3]
+arr11 = [0 for i in range(15)]
+arr12 = [random.randint(1, 30) for i in range(20)]
+arr13 = [random.choice([0, 1]) for i in range(20)]
+arr14 = [[False for i in range(2)] for j in range(5)]
 
+# Printing the created arrays
 print("arr1:", arr1)
 print("arr2:", arr2)
 print("arr3:", arr3)
