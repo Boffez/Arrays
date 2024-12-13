@@ -1,26 +1,20 @@
-arr = [
-    [1, 2, 3, 4, 5],
-    [6, 7, 8, 9, 10],
-    [11, 12, 13, 14, 15]
+# Define a 3x5 array with integer values
+array = [
+    [7, 3, 1, 9, 5],
+    [2, 8, 4, 6, 7],
+    [9, 5, 0, 3, 2]
 ]
 
+# Print the original array
+print("Original array:")
+for row in array:
+    print(" ".join(map(str, row)))
 
-def swap(array):
-    for row in array:
-        row[0], row[-1] = row[-1], row[0]
+# Swap the first and last columns
+for row in array:
+    row[0], row[4] = row[4], row[0]
 
-
-def main():
-    print("Array before swapping:")
-    for row in arr:
-        print(row)
-
-    swap(arr)
-
-    print("\nArray after swapping:")
-    for row in arr:
-        print(row)
-
-
-if __name__ == '__main__':
-    main()
+# Print the array after swapping the first and last columns
+print("\nArray after swapping the first and last columns:")
+for row in array:
+    print(" ".join(map(str, row)))
