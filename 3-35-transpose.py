@@ -1,45 +1,38 @@
-matrices = ([
-                [1, 2, 3],
-                [4, 5, 6],
-                [7, 8, 9]
-            ],
-            [
-                [1, 2, 3, 4, 5],
-                [6, 7, 8, 9, 0]
-            ],
-            [
-                [5, 6, 7, 8]
-            ]
-)
-
-
+# Function to transpose a matrix
 def transpose_matrix(m):
-    return [[m[j][i] for j in range(len(m))] for i in range(len(m[0]))]
+    # Transpose the matrix by converting rows to columns
+    return [list(row) for row in zip(*m)]
 
-    # # same with for loop
-    # transposed = []
-    # for i in range(len(m[0])):
-    #     transposed_row = []
-    #     for j in range(len(m)):
-    #         transposed_row.append(m[j][i])
-    #     transposed.append(transposed_row)
-    # return transposed
-
-
+# Function to print a 2D array in rows and columns
 def print_matrix(matrix):
     for row in matrix:
-        print(' '.join([str(i) for i in row]))
+        print(" ".join(map(str, row)))
 
+# Define the matrices
+matrix_1 = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
 
-def main():
-    for matrix in matrices:
-        print('Original matrix:')
-        print_matrix(matrix)
+matrix_2 = [
+    [1, 2, 3, 4, 5],
+    [6, 7, 8, 9, 0]
+]
 
-        print('Transposed matrix:')
-        print_matrix(transpose_matrix(matrix))
-        print()
+matrix_3 = [
+    [5, 6, 7, 8]
+]
 
+# Print the transposed matrices
+print("Transpose of matrix 1:")
+transposed_1 = transpose_matrix(matrix_1)
+print_matrix(transposed_1)
 
-if __name__ == '__main__':
-    main()
+print("\nTranspose of matrix 2:")
+transposed_2 = transpose_matrix(matrix_2)
+print_matrix(transposed_2)
+
+print("\nTranspose of matrix 3:")
+transposed_3 = transpose_matrix(matrix_3)
+print_matrix(transposed_3)
