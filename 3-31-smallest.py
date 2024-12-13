@@ -1,30 +1,23 @@
-arr = [[-38, 19], [5, 40], [-7, 11], [29, 16]]
+# Define the 2D array
+array = [[-38, 19], [5, 40], [-7, 11], [29, 16]]
 
+# Initialize variables to store the smallest and largest values and their positions
+smallest_value = float('inf')
+largest_value = float('-inf')
+smallest_pos = (-1, -1)
+largest_pos = (-1, -1)
 
-def find_smallest_largest(array):
-    min_value = int()
-    max_value = int()
-    min_position = (-1, -1)
-    max_position = (-1, -1)
+# Loop through each element in the array to find the smallest and largest values
+for i in range(len(array)):
+    for j in range(len(array[i])):
+        # Check for smallest value
+        if array[i][j] < smallest_value:
+            smallest_value = array[i][j]
+            smallest_pos = (i, j)
+        # Check for largest value
+        if array[i][j] > largest_value:
+            largest_value = array[i][j]
+            largest_pos = (i, j)
 
-    # Traverse the array
-    for row_idx, row in enumerate(array):
-        for col_idx, value in enumerate(row):
-            if value < min_value:
-                min_value = value
-                min_position = (row_idx, col_idx)
-            if value > max_value:
-                max_value = value
-                max_position = (row_idx, col_idx)
-
-    return min_value, max_value, min_position, max_position
-
-
-def main():
-    min_value, max_value, min_position, max_position = find_smallest_largest(arr)
-    print(f"The smallest value is {min_value} at row {min_position[0]}, column {min_position[1]}.")
-    print(f"The largest value is {max_value} at row {max_position[0]}, column {max_position[1]}.")
-
-
-if __name__ == '__main__':
-    main()
+print(f"Smallest value: {smallest_value} at row {smallest_pos[0]}, column {smallest_pos[1]}")
+print(f"Largest value: {largest_value} at row {largest_pos[0]}, column {largest_pos[1]}")
